@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 13:23
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 13:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -837,20 +837,12 @@ Underfull \hbox (badness 2418) in paragraph at lines 242--243
 [6]
 
 [7]
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 306--336
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 306--337
  [] 
  []
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 344--381
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 388--429
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 345--382
  [] 
  []
 
@@ -858,7 +850,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 388--429
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 435--486
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 389--430
  [] 
  []
 
@@ -866,7 +858,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 435--486
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 492--548
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 436--487
  [] 
  []
 
@@ -874,7 +866,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 492--548
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 556--625
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 493--549
  [] 
  []
 
@@ -882,7 +874,15 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 556--625
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 634--709
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 557--626
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 635--710
  [] 
  []
 
@@ -910,7 +910,7 @@ L3 programming layer <2022/07/14>
 Here is how much of TeX's memory you used:
  12114 strings out of 473832
  295399 string characters out of 5729481
- 868646 words of memory out of 5000000
+ 869646 words of memory out of 5000000
  34930 multiletter control sequences out of 15000+600000
  568736 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
