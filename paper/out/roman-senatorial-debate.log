@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 15:33
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 16:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -799,101 +799,80 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./chapters/1-rules.tex
+) (./chapters/0-intro.tex) (./chapters/1-rules.tex
 
 [1
 
 ]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 [2]
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 88--119
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 87--118
  [] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 127--164
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 171--212
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 218--269
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 275--331
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 339--408
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 417--492
- [] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./chapters/2-elimination-rounds.tex
 
 [3]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 126--163
+ [] 
+ []
+
+
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 170--211
+ [] 
+ []
+
+
 
 [4]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 217--268
+ [] 
+ []
+
+
 
 [5]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 274--330
+ [] 
+ []
+
+
 
 [6]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 338--407
+ [] 
+ []
 
-[7])
 
-[8]
+
+[7]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 416--491
+ [] 
+ []
+
+
+
+[8]) (./chapters/2-elimination-rounds.tex
 
 [9]
 
-[10] (out/roman-senatorial-debate.aux)
+[10])
+
+[11]
+
+[12] (out/roman-senatorial-debate.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12128 strings out of 473832
- 296192 string characters out of 5729481
- 873220 words of memory out of 5000000
- 34944 multiletter control sequences out of 15000+600000
+ 12135 strings out of 473832
+ 296335 string characters out of 5729481
+ 797220 words of memory out of 5000000
+ 34948 multiletter control sequences out of 15000+600000
  568680 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,17n,114p,1114b,403s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,17n,114p,1315b,403s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/roman-senatorial-debate.pdf (10 pages).
+Output written on out/roman-senatorial-debate.pdf (12 pages).
