@@ -1,0 +1,472 @@
+\section{Successful implementation proposal}
+
+Here we present the rules of a round of Roman Senatorial Debate.
+
+\begin{enumerate}
+    \item  \textbf{Number of debaters.} The standard number of debaters is 8. Speaking time is 7 minutes.
+
+    \begin{itemize}
+        \item The Roman Sentorial Debate format should work from 4 debaters to any number of debaters, even beyond 8, but for the purpose of a tournament, rooms should be assumed to accommodate 8 debaters, so the pace would mirror that of the British Parliamentary style.  
+    \end{itemize}
+    \item In the beginning of the debate, each debater must reveal in their hand a number of coins. If they add up to 1\$ it means they support the motion. If they add up to 2\$ it means they're against the motion. This is supposed to be biased for the motion for it to pass. The sums are then pooled into the common pot. And they start to debate.
+    \item Each debater makes a speech. During any time of their speech, they may add money to the pot.
+    \item At the end of all speeches, votes are counted. The number of votes must reach the 1/2 + 1 number of votes threshold to pass.
+    \item Points are distributed thus:
+\end{enumerate}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|ccc}
+\toprule
+ & 留 & 轉軚 & 棄權 \\
+\midrule
+贏 & 3 & 1 & 0 \\
+輸 & 2 & 0 & 0 \\
+和 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+    \item The pot money is split thus:
+    \begin{enumerate}
+        \item $s$ is the total sum in the pot, which always abides by the following: $s = w_{\text{留}} + w_{\text{轉}}$
+        \item $v$ is the total number of votes on the winning side, which always abides by the following: $v = v_{\text{留}} + v_{\text{轉}}$
+        \item $w_{\text{留}}$ and $w_{\text{轉}}$ are defined as such:
+        \begin{enumerate}
+            \item $w_{\text{留}} = s \cdot \frac{v_{\text{留}}+1}{v+1}$
+            \item $w_{\text{轉}} = s \cdot \frac{v_{\text{轉}}}{v+1}$
+        \end{enumerate}
+        \item To say this without justification, this creates a quasi-prisoner's dilemma situation in the following box, where those who switch sides and win, win money but lose out relatively on points.
+        \item the split of the $w_{\text{留}}$ and $w_{\text{轉}}$ leave a weird case where everyone switched sides and that side won. In such a case, there'd be nobody to claim the virtual 留贏 share. That share can go to many places: (1) the poorest member, (2) the hosting tournament, (3) divided equally amongst all players\ldots (4) taken by the winning side as well\ldots
+    \end{enumerate}
+\end{enumerate}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|cc}
+\toprule
+ & 留 & 轉軚 \\
+\midrule
+贏 & 3 & 1 \\
+輸 & 2 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The point of the dynamic is: some people care about the money, some people care about passing the motion.
+
+
+
+\section{Payout structure by debater count}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{threeparttable}
+    \begin{tabular}{cccccccc}    
+    \toprule
+    $n_{\text{debaters}}$ & $v_{\text{win}}$ & $v_{\text{留}}$ & $v_{\text{轉}}$ & $w_{\text{留}} = 100 \cdot \frac{v_{\text{留}}+1}{v_{win}+1} $ & $w_{\text{轉}} = 100\cdot\frac{v_{\text{轉}}}{v+1}$ & $\text{w}_{\text{留}/\text{人} }$ & $\text{w}_{\text{轉}/\text{人}}$ \\
+    \midrule
+
+% \midrule
+6 & 4 & 0 & 4 & 20.0 & 80.0 & n/a\tnote{a} & 20.0 \\
+6 & 4 & 1 & 3 & 40.0 & 60.0 & 40.0 & 20.0 \\
+6 & 4 & 2 & 2 & 60.0 & 40.0 & 30.0 & 20.0 \\
+6 & 4 & 3 & 1 & 80.0 & 20.0 & 26.67 & 20.0 \\
+6 & 4 & 4 & 0 & 100.0 & 0.0 & 25.0 & 0.0 \\
+6 & 5 & 0 & 5 & 16.67 & 83.33 & n/a\tnote{a} & 16.67 \\
+6 & 5 & 1 & 4 & 33.33 & 66.67 & 33.33 & 16.67 \\
+6 & 5 & 2 & 3 & 50.0 & 50.0 & 25.0 & 16.67 \\
+6 & 5 & 3 & 2 & 66.67 & 33.33 & 22.22 & 16.67 \\
+6 & 5 & 4 & 1 & 83.33 & 16.67 & 20.83 & 16.67 \\
+6 & 5 & 5 & 0 & 100.0 & 0.0 & 20.0 & 0.0 \\
+6 & 6 & 0 & 6 & 14.29 & 85.71 & n/a\tnote{a} & 14.29 \\
+6 & 6 & 1 & 5 & 28.57 & 71.43 & 28.57 & 14.29 \\
+6 & 6 & 2 & 4 & 42.86 & 57.14 & 21.43 & 14.29 \\
+6 & 6 & 3 & 3 & 57.14 & 42.86 & 19.05 & 14.29 \\
+6 & 6 & 4 & 2 & 71.43 & 28.57 & 17.86 & 14.29 \\
+6 & 6 & 5 & 1 & 85.71 & 14.29 & 17.14 & 14.29 \\
+6 & 6 & 6 & 0 & 100.0 & 0.0 & 16.67 & 0.0 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+    \item[a] n/a, because there are literally no participants who won who stayed on the position that they started with. 
+    Obviously this is a degenerate and highly unlikely case. But we still need to figure out how to handle the payout which has no one to receive it. It can either (1) be distributed amongst those who won, (2) go to anyone on the losing side who stuck to their guns, or (3) go to the poorest member, or (4) to the tournament organizer. We are not too interested in the details. 
+\end{tablenotes}
+\end{threeparttable}
+
+\caption{Payout structure for different numbers of debaters and voting scenarios}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{threeparttable}
+    \begin{tabular}{cccccccc}
+    \toprule
+    $n_{\text{debaters}}$ & $v_{\text{win}}$ & $v_{\text{留}}$ & $v_{\text{轉}}$ & $w_{\text{留}} = 100 \cdot \frac{v_{\text{留}}+1}{v_{win}+1} $ & $w_{\text{轉}} = 100\cdot\frac{v_{\text{轉}}}{v+1}$ & $\text{w}_{\text{留}/\text{人} }$ & $\text{w}_{\text{轉}/\text{人}}$ \\
+    \midrule
+7 & 4 & 0 & 4 & 20.0 & 80.0 & n/a\tnote{a} & 20.0 \\
+7 & 4 & 1 & 3 & 40.0 & 60.0 & 40.0 & 20.0 \\
+7 & 4 & 2 & 2 & 60.0 & 40.0 & 30.0 & 20.0 \\
+7 & 4 & 3 & 1 & 80.0 & 20.0 & 26.67 & 20.0 \\
+7 & 4 & 4 & 0 & 100.0 & 0.0 & 25.0 & 0.0 \\
+7 & 5 & 0 & 5 & 16.67 & 83.33 & n/a\tnote{a} & 16.67 \\
+7 & 5 & 1 & 4 & 33.33 & 66.67 & 33.33 & 16.67 \\
+7 & 5 & 2 & 3 & 50.0 & 50.0 & 25.0 & 16.67 \\
+7 & 5 & 3 & 2 & 66.67 & 33.33 & 22.22 & 16.67 \\
+7 & 5 & 4 & 1 & 83.33 & 16.67 & 20.83 & 16.67 \\
+7 & 5 & 5 & 0 & 100.0 & 0.0 & 20.0 & 0.0 \\
+7 & 6 & 0 & 6 & 14.29 & 85.71 & n/a\tnote{a} & 14.29 \\
+7 & 6 & 1 & 5 & 28.57 & 71.43 & 28.57 & 14.29 \\
+7 & 6 & 2 & 4 & 42.86 & 57.14 & 21.43 & 14.29 \\
+7 & 6 & 3 & 3 & 57.14 & 42.86 & 19.05 & 14.29 \\
+7 & 6 & 4 & 2 & 71.43 & 28.57 & 17.86 & 14.29 \\
+7 & 6 & 5 & 1 & 85.71 & 14.29 & 17.14 & 14.29 \\
+7 & 6 & 6 & 0 & 100.0 & 0.0 & 16.67 & 0.0 \\
+7 & 7 & 0 & 7 & 12.5 & 87.5 & n/a\tnote{a} & 12.5 \\
+7 & 7 & 1 & 6 & 25.0 & 75.0 & 25.0 & 12.5 \\
+7 & 7 & 2 & 5 & 37.5 & 62.5 & 18.75 & 12.5 \\
+7 & 7 & 3 & 4 & 50.0 & 50.0 & 16.67 & 12.5 \\
+7 & 7 & 4 & 3 & 62.5 & 37.5 & 15.62 & 12.5 \\
+7 & 7 & 5 & 2 & 75.0 & 25.0 & 15.0 & 12.5 \\
+7 & 7 & 6 & 1 & 87.5 & 12.5 & 14.58 & 12.5 \\
+7 & 7 & 7 & 0 & 100.0 & 0.0 & 14.29 & 0.0 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+    \item[a] n/a indicates no 留 voters to receive the payout.
+\end{tablenotes}
+\caption{Payout structure for different numbers of debaters and voting scenarios}
+\end{threeparttable}
+\end{table}
+
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{threeparttable}
+    \begin{tabular}{cccccccc}
+    \toprule
+    $n_{\text{debaters}}$ & $v_{\text{win}}$ & $v_{\text{留}}$ & $v_{\text{轉}}$ & $w_{\text{留}} = 100 \cdot \frac{v_{\text{留}}+1}{v_{win}+1} $ & $w_{\text{轉}} = 100\cdot\frac{v_{\text{轉}}}{v+1}$ & $\text{w}_{\text{留}/\text{人} }$ & $\text{w}_{\text{轉}/\text{人}}$ \\
+    \midrule
+8 & 5 & 0 & 5 & 16.67 & 83.33 & n/a\tnote{a} & 16.67 \\
+8 & 5 & 1 & 4 & 33.33 & 66.67 & 33.33 & 16.67 \\
+8 & 5 & 2 & 3 & 50.0 & 50.0 & 25.0 & 16.67 \\
+8 & 5 & 3 & 2 & 66.67 & 33.33 & 22.22 & 16.67 \\
+8 & 5 & 4 & 1 & 83.33 & 16.67 & 20.83 & 16.67 \\
+8 & 5 & 5 & 0 & 100.0 & 0.0 & 20.0 & 0.0 \\
+8 & 6 & 0 & 6 & 14.29 & 85.71 & n/a\tnote{a} & 14.29 \\
+8 & 6 & 1 & 5 & 28.57 & 71.43 & 28.57 & 14.29 \\
+8 & 6 & 2 & 4 & 42.86 & 57.14 & 21.43 & 14.29 \\
+8 & 6 & 3 & 3 & 57.14 & 42.86 & 19.05 & 14.29 \\
+8 & 6 & 4 & 2 & 71.43 & 28.57 & 17.86 & 14.29 \\
+8 & 6 & 5 & 1 & 85.71 & 14.29 & 17.14 & 14.29 \\
+8 & 6 & 6 & 0 & 100.0 & 0.0 & 16.67 & 0.0 \\
+8 & 7 & 0 & 7 & 12.5 & 87.5 & n/a\tnote{a} & 12.5 \\
+8 & 7 & 1 & 6 & 25.0 & 75.0 & 25.0 & 12.5 \\
+8 & 7 & 2 & 5 & 37.5 & 62.5 & 18.75 & 12.5 \\
+8 & 7 & 3 & 4 & 50.0 & 50.0 & 16.67 & 12.5 \\
+8 & 7 & 4 & 3 & 62.5 & 37.5 & 15.62 & 12.5 \\
+8 & 7 & 5 & 2 & 75.0 & 25.0 & 15.0 & 12.5 \\
+8 & 7 & 6 & 1 & 87.5 & 12.5 & 14.58 & 12.5 \\
+8 & 7 & 7 & 0 & 100.0 & 0.0 & 14.29 & 0.0 \\
+8 & 8 & 0 & 8 & 11.11 & 88.89 & n/a\tnote{a} & 11.11 \\
+8 & 8 & 1 & 7 & 22.22 & 77.78 & 22.22 & 11.11 \\
+8 & 8 & 2 & 6 & 33.33 & 66.67 & 16.67 & 11.11 \\
+8 & 8 & 3 & 5 & 44.44 & 55.56 & 14.81 & 11.11 \\
+8 & 8 & 4 & 4 & 55.56 & 44.44 & 13.89 & 11.11 \\
+8 & 8 & 5 & 3 & 66.67 & 33.33 & 13.33 & 11.11 \\
+8 & 8 & 6 & 2 & 77.78 & 22.22 & 12.96 & 11.11 \\
+8 & 8 & 7 & 1 & 88.89 & 11.11 & 12.7 & 11.11 \\
+8 & 8 & 8 & 0 & 100.0 & 0.0 & 12.5 & 0.0 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+    \item[a] n/a indicates no 留 voters to receive the payout.
+\end{tablenotes}
+\caption{Payout structure for different numbers of debaters and voting scenarios}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{threeparttable}
+    \begin{tabular}{cccccccc}
+    \toprule
+    $n_{\text{debaters}}$ & $v_{\text{win}}$ & $v_{\text{留}}$ & $v_{\text{轉}}$ & $w_{\text{留}} = 100 \cdot \frac{v_{\text{留}}+1}{v_{win}+1} $ & $w_{\text{轉}} = 100\cdot\frac{v_{\text{轉}}}{v+1}$ & $\text{w}_{\text{留}/\text{人} }$ & $\text{w}_{\text{轉}/\text{人}}$ \\
+    \midrule
+9 & 5 & 0 & 5 & 16.67 & 83.33 & n/a\tnote{a} & 16.67 \\
+9 & 5 & 1 & 4 & 33.33 & 66.67 & 33.33 & 16.67 \\
+9 & 5 & 2 & 3 & 50.0 & 50.0 & 25.0 & 16.67 \\
+9 & 5 & 3 & 2 & 66.67 & 33.33 & 22.22 & 16.67 \\
+9 & 5 & 4 & 1 & 83.33 & 16.67 & 20.83 & 16.67 \\
+9 & 5 & 5 & 0 & 100.0 & 0.0 & 20.0 & 0.0 \\
+9 & 6 & 0 & 6 & 14.29 & 85.71 & n/a\tnote{a} & 14.29 \\
+9 & 6 & 1 & 5 & 28.57 & 71.43 & 28.57 & 14.29 \\
+9 & 6 & 2 & 4 & 42.86 & 57.14 & 21.43 & 14.29 \\
+9 & 6 & 3 & 3 & 57.14 & 42.86 & 19.05 & 14.29 \\
+9 & 6 & 4 & 2 & 71.43 & 28.57 & 17.86 & 14.29 \\
+9 & 6 & 5 & 1 & 85.71 & 14.29 & 17.14 & 14.29 \\
+9 & 6 & 6 & 0 & 100.0 & 0.0 & 16.67 & 0.0 \\
+9 & 7 & 0 & 7 & 12.5 & 87.5 & n/a\tnote{a} & 12.5 \\
+9 & 7 & 1 & 6 & 25.0 & 75.0 & 25.0 & 12.5 \\
+9 & 7 & 2 & 5 & 37.5 & 62.5 & 18.75 & 12.5 \\
+9 & 7 & 3 & 4 & 50.0 & 50.0 & 16.67 & 12.5 \\
+9 & 7 & 4 & 3 & 62.5 & 37.5 & 15.62 & 12.5 \\
+9 & 7 & 5 & 2 & 75.0 & 25.0 & 15.0 & 12.5 \\
+9 & 7 & 6 & 1 & 87.5 & 12.5 & 14.58 & 12.5 \\
+9 & 7 & 7 & 0 & 100.0 & 0.0 & 14.29 & 0.0 \\
+9 & 8 & 0 & 8 & 11.11 & 88.89 & n/a\tnote{a} & 11.11 \\
+9 & 8 & 1 & 7 & 22.22 & 77.78 & 22.22 & 11.11 \\
+9 & 8 & 2 & 6 & 33.33 & 66.67 & 16.67 & 11.11 \\
+9 & 8 & 3 & 5 & 44.44 & 55.56 & 14.81 & 11.11 \\
+9 & 8 & 4 & 4 & 55.56 & 44.44 & 13.89 & 11.11 \\
+9 & 8 & 5 & 3 & 66.67 & 33.33 & 13.33 & 11.11 \\
+9 & 8 & 6 & 2 & 77.78 & 22.22 & 12.96 & 11.11 \\
+9 & 8 & 7 & 1 & 88.89 & 11.11 & 12.7 & 11.11 \\
+9 & 8 & 8 & 0 & 100.0 & 0.0 & 12.5 & 0.0 \\
+9 & 9 & 0 & 9 & 10.0 & 90.0 & n/a\tnote{a} & 10.0 \\
+9 & 9 & 1 & 8 & 20.0 & 80.0 & 20.0 & 10.0 \\
+9 & 9 & 2 & 7 & 30.0 & 70.0 & 15.0 & 10.0 \\
+9 & 9 & 3 & 6 & 40.0 & 60.0 & 13.33 & 10.0 \\
+9 & 9 & 4 & 5 & 50.0 & 50.0 & 12.5 & 10.0 \\
+9 & 9 & 5 & 4 & 60.0 & 40.0 & 12.0 & 10.0 \\
+9 & 9 & 6 & 3 & 70.0 & 30.0 & 11.67 & 10.0 \\
+9 & 9 & 7 & 2 & 80.0 & 20.0 & 11.43 & 10.0 \\
+9 & 9 & 8 & 1 & 90.0 & 10.0 & 11.25 & 10.0 \\
+9 & 9 & 9 & 0 & 100.0 & 0.0 & 11.11 & 0.0 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+    \item[a] n/a indicates no 留 voters to receive the payout.
+\end{tablenotes}
+\caption{Payout structure for different numbers of debaters and voting scenarios}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{threeparttable}
+    \begin{tabular}{cccccccc}
+    \toprule
+    $n_{\text{debaters}}$ & $v_{\text{win}}$ & $v_{\text{留}}$ & $v_{\text{轉}}$ & $w_{\text{留}} = 100 \cdot \frac{v_{\text{留}}+1}{v_{win}+1} $ & $w_{\text{轉}} = 100\cdot\frac{v_{\text{轉}}}{v+1}$ & $\text{w}_{\text{留}/\text{人} }$ & $\text{w}_{\text{轉}/\text{人}}$ \\
+    \midrule
+10 & 6 & 0 & 6 & 14.29 & 85.71 & n/a\tnote{a} & 14.29 \\
+10 & 6 & 1 & 5 & 28.57 & 71.43 & 28.57 & 14.29 \\
+10 & 6 & 2 & 4 & 42.86 & 57.14 & 21.43 & 14.29 \\
+10 & 6 & 3 & 3 & 57.14 & 42.86 & 19.05 & 14.29 \\
+10 & 6 & 4 & 2 & 71.43 & 28.57 & 17.86 & 14.29 \\
+10 & 6 & 5 & 1 & 85.71 & 14.29 & 17.14 & 14.29 \\
+10 & 6 & 6 & 0 & 100.0 & 0.0 & 16.67 & 0.0 \\
+10 & 7 & 0 & 7 & 12.5 & 87.5 & n/a\tnote{a} & 12.5 \\
+10 & 7 & 1 & 6 & 25.0 & 75.0 & 25.0 & 12.5 \\
+10 & 7 & 2 & 5 & 37.5 & 62.5 & 18.75 & 12.5 \\
+10 & 7 & 3 & 4 & 50.0 & 50.0 & 16.67 & 12.5 \\
+10 & 7 & 4 & 3 & 62.5 & 37.5 & 15.62 & 12.5 \\
+10 & 7 & 5 & 2 & 75.0 & 25.0 & 15.0 & 12.5 \\
+10 & 7 & 6 & 1 & 87.5 & 12.5 & 14.58 & 12.5 \\
+10 & 7 & 7 & 0 & 100.0 & 0.0 & 14.29 & 0.0 \\
+10 & 8 & 0 & 8 & 11.11 & 88.89 & n/a\tnote{a} & 11.11 \\
+10 & 8 & 1 & 7 & 22.22 & 77.78 & 22.22 & 11.11 \\
+10 & 8 & 2 & 6 & 33.33 & 66.67 & 16.67 & 11.11 \\
+10 & 8 & 3 & 5 & 44.44 & 55.56 & 14.81 & 11.11 \\
+10 & 8 & 4 & 4 & 55.56 & 44.44 & 13.89 & 11.11 \\
+10 & 8 & 5 & 3 & 66.67 & 33.33 & 13.33 & 11.11 \\
+10 & 8 & 6 & 2 & 77.78 & 22.22 & 12.96 & 11.11 \\
+10 & 8 & 7 & 1 & 88.89 & 11.11 & 12.7 & 11.11 \\
+10 & 8 & 8 & 0 & 100.0 & 0.0 & 12.5 & 0.0 \\
+10 & 9 & 0 & 9 & 10.0 & 90.0 & n/a\tnote{a} & 10.0 \\
+10 & 9 & 1 & 8 & 20.0 & 80.0 & 20.0 & 10.0 \\
+10 & 9 & 2 & 7 & 30.0 & 70.0 & 15.0 & 10.0 \\
+10 & 9 & 3 & 6 & 40.0 & 60.0 & 13.33 & 10.0 \\
+10 & 9 & 4 & 5 & 50.0 & 50.0 & 12.5 & 10.0 \\
+10 & 9 & 5 & 4 & 60.0 & 40.0 & 12.0 & 10.0 \\
+10 & 9 & 6 & 3 & 70.0 & 30.0 & 11.67 & 10.0 \\
+10 & 9 & 7 & 2 & 80.0 & 20.0 & 11.43 & 10.0 \\
+10 & 9 & 8 & 1 & 90.0 & 10.0 & 11.25 & 10.0 \\
+10 & 9 & 9 & 0 & 100.0 & 0.0 & 11.11 & 0.0 \\
+10 & 10 & 0 & 10 & 9.09 & 90.91 & n/a\tnote{a} & 9.09 \\
+10 & 10 & 1 & 9 & 18.18 & 81.82 & 18.18 & 9.09 \\
+10 & 10 & 2 & 8 & 27.27 & 72.73 & 13.64 & 9.09 \\
+10 & 10 & 3 & 7 & 36.36 & 63.64 & 12.12 & 9.09 \\
+10 & 10 & 4 & 6 & 45.45 & 54.55 & 11.36 & 9.09 \\
+10 & 10 & 5 & 5 & 54.55 & 45.45 & 10.91 & 9.09 \\
+10 & 10 & 6 & 4 & 63.64 & 36.36 & 10.61 & 9.09 \\
+10 & 10 & 7 & 3 & 72.73 & 27.27 & 10.39 & 9.09 \\
+10 & 10 & 8 & 2 & 81.82 & 18.18 & 10.23 & 9.09 \\
+10 & 10 & 9 & 1 & 90.91 & 9.09 & 10.1 & 9.09 \\
+10 & 10 & 10 & 0 & 100.0 & 0.0 & 10.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+    \item[a] n/a indicates no 留 voters to receive the payout.
+\end{tablenotes}
+\caption{Payout structure for different numbers of debaters and voting scenarios}
+\end{threeparttable}
+\end{table}
+
+
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{threeparttable}
+    \begin{tabular}{cccccccc}
+    \toprule    \toprule
+    $n_{\text{debaters}}$ & $v_{\text{win}}$ & $v_{\text{留}}$ & $v_{\text{轉}}$ & $w_{\text{留}} = 100 \cdot \frac{v_{\text{留}}+1}{v_{win}+1} $ & $w_{\text{轉}} = 100\cdot\frac{v_{\text{轉}}}{v+1}$ & $\text{w}_{\text{留}/\text{人} }$ & $\text{w}_{\text{轉}/\text{人}}$ \\
+    \midrule
+11 & 6 & 0 & 6 & 14.29 & 85.71 & n/a\tnote{a} & 14.29 \\
+11 & 6 & 1 & 5 & 28.57 & 71.43 & 28.57 & 14.29 \\
+11 & 6 & 2 & 4 & 42.86 & 57.14 & 21.43 & 14.29 \\
+11 & 6 & 3 & 3 & 57.14 & 42.86 & 19.05 & 14.29 \\
+11 & 6 & 4 & 2 & 71.43 & 28.57 & 17.86 & 14.29 \\
+11 & 6 & 5 & 1 & 85.71 & 14.29 & 17.14 & 14.29 \\
+11 & 6 & 6 & 0 & 100.0 & 0.0 & 16.67 & 0.0 \\
+11 & 7 & 0 & 7 & 12.5 & 87.5 & n/a\tnote{a} & 12.5 \\
+11 & 7 & 1 & 6 & 25.0 & 75.0 & 25.0 & 12.5 \\
+11 & 7 & 2 & 5 & 37.5 & 62.5 & 18.75 & 12.5 \\
+11 & 7 & 3 & 4 & 50.0 & 50.0 & 16.67 & 12.5 \\
+11 & 7 & 4 & 3 & 62.5 & 37.5 & 15.62 & 12.5 \\
+11 & 7 & 5 & 2 & 75.0 & 25.0 & 15.0 & 12.5 \\
+11 & 7 & 6 & 1 & 87.5 & 12.5 & 14.58 & 12.5 \\
+11 & 7 & 7 & 0 & 100.0 & 0.0 & 14.29 & 0.0 \\
+11 & 8 & 0 & 8 & 11.11 & 88.89 & n/a\tnote{a} & 11.11 \\
+11 & 8 & 1 & 7 & 22.22 & 77.78 & 22.22 & 11.11 \\
+11 & 8 & 2 & 6 & 33.33 & 66.67 & 16.67 & 11.11 \\
+11 & 8 & 3 & 5 & 44.44 & 55.56 & 14.81 & 11.11 \\
+11 & 8 & 4 & 4 & 55.56 & 44.44 & 13.89 & 11.11 \\
+11 & 8 & 5 & 3 & 66.67 & 33.33 & 13.33 & 11.11 \\
+11 & 8 & 6 & 2 & 77.78 & 22.22 & 12.96 & 11.11 \\
+11 & 8 & 7 & 1 & 88.89 & 11.11 & 12.7 & 11.11 \\
+11 & 8 & 8 & 0 & 100.0 & 0.0 & 12.5 & 0.0 \\
+11 & 9 & 0 & 9 & 10.0 & 90.0 & n/a\tnote{a} & 10.0 \\
+11 & 9 & 1 & 8 & 20.0 & 80.0 & 20.0 & 10.0 \\
+11 & 9 & 2 & 7 & 30.0 & 70.0 & 15.0 & 10.0 \\
+11 & 9 & 3 & 6 & 40.0 & 60.0 & 13.33 & 10.0 \\
+11 & 9 & 4 & 5 & 50.0 & 50.0 & 12.5 & 10.0 \\
+11 & 9 & 5 & 4 & 60.0 & 40.0 & 12.0 & 10.0 \\
+11 & 9 & 6 & 3 & 70.0 & 30.0 & 11.67 & 10.0 \\
+11 & 9 & 7 & 2 & 80.0 & 20.0 & 11.43 & 10.0 \\
+11 & 9 & 8 & 1 & 90.0 & 10.0 & 11.25 & 10.0 \\
+11 & 9 & 9 & 0 & 100.0 & 0.0 & 11.11 & 0.0 \\
+11 & 10 & 0 & 10 & 9.09 & 90.91 & n/a\tnote{a} & 9.09 \\
+11 & 10 & 1 & 9 & 18.18 & 81.82 & 18.18 & 9.09 \\
+11 & 10 & 2 & 8 & 27.27 & 72.73 & 13.64 & 9.09 \\
+11 & 10 & 3 & 7 & 36.36 & 63.64 & 12.12 & 9.09 \\
+11 & 10 & 4 & 6 & 45.45 & 54.55 & 11.36 & 9.09 \\
+11 & 10 & 5 & 5 & 54.55 & 45.45 & 10.91 & 9.09 \\
+11 & 10 & 6 & 4 & 63.64 & 36.36 & 10.61 & 9.09 \\
+11 & 10 & 7 & 3 & 72.73 & 27.27 & 10.39 & 9.09 \\
+11 & 10 & 8 & 2 & 81.82 & 18.18 & 10.23 & 9.09 \\
+11 & 10 & 9 & 1 & 90.91 & 9.09 & 10.1 & 9.09 \\
+11 & 10 & 10 & 0 & 100.0 & 0.0 & 10.0 & 0.0 \\
+11 & 11 & 0 & 11 & 8.33 & 91.67 & n/a\tnote{a} & 8.33 \\
+11 & 11 & 1 & 10 & 16.67 & 83.33 & 16.67 & 8.33 \\
+11 & 11 & 2 & 9 & 25.0 & 75.0 & 12.5 & 8.33 \\
+11 & 11 & 3 & 8 & 33.33 & 66.67 & 11.11 & 8.33 \\
+11 & 11 & 4 & 7 & 41.67 & 58.33 & 10.42 & 8.33 \\
+11 & 11 & 5 & 6 & 50.0 & 50.0 & 10.0 & 8.33 \\
+11 & 11 & 6 & 5 & 58.33 & 41.67 & 9.72 & 8.33 \\
+11 & 11 & 7 & 4 & 66.67 & 33.33 & 9.52 & 8.33 \\
+11 & 11 & 8 & 3 & 75.0 & 25.0 & 9.38 & 8.33 \\
+11 & 11 & 9 & 2 & 83.33 & 16.67 & 9.26 & 8.33 \\
+11 & 11 & 10 & 1 & 91.67 & 8.33 & 9.17 & 8.33 \\
+11 & 11 & 11 & 0 & 100.0 & 0.0 & 9.09 & 0.0 \\
+
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+    \item[a] n/a indicates no 留 voters to receive the payout.
+\end{tablenotes}
+\caption{Payout structure for different numbers of debaters and voting scenarios}
+\end{threeparttable}
+\end{table}
+
+
+
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{threeparttable}
+    \begin{tabular}{cccccccc}
+    \toprule    \toprule
+    $n_{\text{debaters}}$ & $v_{\text{win}}$ & $v_{\text{留}}$ & $v_{\text{轉}}$ & $w_{\text{留}} = 100 \cdot \frac{v_{\text{留}}+1}{v_{win}+1} $ & $w_{\text{轉}} = 100\cdot\frac{v_{\text{轉}}}{v+1}$ & $\text{w}_{\text{留}/\text{人} }$ & $\text{w}_{\text{轉}/\text{人}}$ \\
+    \midrule
+12 & 7 & 0 & 7 & 12.5 & 87.5 & n/a\tnote{a} & 12.5 \\
+12 & 7 & 1 & 6 & 25.0 & 75.0 & 25.0 & 12.5 \\
+12 & 7 & 2 & 5 & 37.5 & 62.5 & 18.75 & 12.5 \\
+12 & 7 & 3 & 4 & 50.0 & 50.0 & 16.67 & 12.5 \\
+12 & 7 & 4 & 3 & 62.5 & 37.5 & 15.62 & 12.5 \\
+12 & 7 & 5 & 2 & 75.0 & 25.0 & 15.0 & 12.5 \\
+12 & 7 & 6 & 1 & 87.5 & 12.5 & 14.58 & 12.5 \\
+12 & 7 & 7 & 0 & 100.0 & 0.0 & 14.29 & 0.0 \\
+12 & 8 & 0 & 8 & 11.11 & 88.89 & n/a\tnote{a} & 11.11 \\
+12 & 8 & 1 & 7 & 22.22 & 77.78 & 22.22 & 11.11 \\
+12 & 8 & 2 & 6 & 33.33 & 66.67 & 16.67 & 11.11 \\
+12 & 8 & 3 & 5 & 44.44 & 55.56 & 14.81 & 11.11 \\
+12 & 8 & 4 & 4 & 55.56 & 44.44 & 13.89 & 11.11 \\
+12 & 8 & 5 & 3 & 66.67 & 33.33 & 13.33 & 11.11 \\
+12 & 8 & 6 & 2 & 77.78 & 22.22 & 12.96 & 11.11 \\
+12 & 8 & 7 & 1 & 88.89 & 11.11 & 12.7 & 11.11 \\
+12 & 8 & 8 & 0 & 100.0 & 0.0 & 12.5 & 0.0 \\
+12 & 9 & 0 & 9 & 10.0 & 90.0 & n/a\tnote{a} & 10.0 \\
+12 & 9 & 1 & 8 & 20.0 & 80.0 & 20.0 & 10.0 \\
+12 & 9 & 2 & 7 & 30.0 & 70.0 & 15.0 & 10.0 \\
+12 & 9 & 3 & 6 & 40.0 & 60.0 & 13.33 & 10.0 \\
+12 & 9 & 4 & 5 & 50.0 & 50.0 & 12.5 & 10.0 \\
+12 & 9 & 5 & 4 & 60.0 & 40.0 & 12.0 & 10.0 \\
+12 & 9 & 6 & 3 & 70.0 & 30.0 & 11.67 & 10.0 \\
+12 & 9 & 7 & 2 & 80.0 & 20.0 & 11.43 & 10.0 \\
+12 & 9 & 8 & 1 & 90.0 & 10.0 & 11.25 & 10.0 \\
+12 & 9 & 9 & 0 & 100.0 & 0.0 & 11.11 & 0.0 \\
+12 & 10 & 0 & 10 & 9.09 & 90.91 & n/a\tnote{a} & 9.09 \\
+12 & 10 & 1 & 9 & 18.18 & 81.82 & 18.18 & 9.09 \\
+12 & 10 & 2 & 8 & 27.27 & 72.73 & 13.64 & 9.09 \\
+12 & 10 & 3 & 7 & 36.36 & 63.64 & 12.12 & 9.09 \\
+12 & 10 & 4 & 6 & 45.45 & 54.55 & 11.36 & 9.09 \\
+12 & 10 & 5 & 5 & 54.55 & 45.45 & 10.91 & 9.09 \\
+12 & 10 & 6 & 4 & 63.64 & 36.36 & 10.61 & 9.09 \\
+12 & 10 & 7 & 3 & 72.73 & 27.27 & 10.39 & 9.09 \\
+12 & 10 & 8 & 2 & 81.82 & 18.18 & 10.23 & 9.09 \\
+12 & 10 & 9 & 1 & 90.91 & 9.09 & 10.1 & 9.09 \\
+12 & 10 & 10 & 0 & 100.0 & 0.0 & 10.0 & 0.0 \\
+12 & 11 & 0 & 11 & 8.33 & 91.67 & n/a\tnote{a} & 8.33 \\
+12 & 11 & 1 & 10 & 16.67 & 83.33 & 16.67 & 8.33 \\
+12 & 11 & 2 & 9 & 25.0 & 75.0 & 12.5 & 8.33 \\
+12 & 11 & 3 & 8 & 33.33 & 66.67 & 11.11 & 8.33 \\
+12 & 11 & 4 & 7 & 41.67 & 58.33 & 10.42 & 8.33 \\
+12 & 11 & 5 & 6 & 50.0 & 50.0 & 10.0 & 8.33 \\
+12 & 11 & 6 & 5 & 58.33 & 41.67 & 9.72 & 8.33 \\
+12 & 11 & 7 & 4 & 66.67 & 33.33 & 9.52 & 8.33 \\
+12 & 11 & 8 & 3 & 75.0 & 25.0 & 9.38 & 8.33 \\
+12 & 11 & 9 & 2 & 83.33 & 16.67 & 9.26 & 8.33 \\
+12 & 11 & 10 & 1 & 91.67 & 8.33 & 9.17 & 8.33 \\
+12 & 11 & 11 & 0 & 100.0 & 0.0 & 9.09 & 0.0 \\
+12 & 12 & 0 & 12 & 7.69 & 92.31 & n/a\tnote{a} & 7.69 \\
+12 & 12 & 1 & 11 & 15.38 & 84.62 & 15.38 & 7.69 \\
+12 & 12 & 2 & 10 & 23.08 & 76.92 & 11.54 & 7.69 \\
+12 & 12 & 3 & 9 & 30.77 & 69.23 & 10.26 & 7.69 \\
+12 & 12 & 4 & 8 & 38.46 & 61.54 & 9.62 & 7.69 \\
+12 & 12 & 5 & 7 & 46.15 & 53.85 & 9.23 & 7.69 \\
+12 & 12 & 6 & 6 & 53.85 & 46.15 & 8.97 & 7.69 \\
+12 & 12 & 7 & 5 & 61.54 & 38.46 & 8.79 & 7.69 \\
+12 & 12 & 8 & 4 & 69.23 & 30.77 & 8.65 & 7.69 \\
+12 & 12 & 9 & 3 & 76.92 & 23.08 & 8.55 & 7.69 \\
+12 & 12 & 10 & 2 & 84.62 & 15.38 & 8.46 & 7.69 \\
+12 & 12 & 11 & 1 & 92.31 & 7.69 & 8.39 & 7.69 \\
+12 & 12 & 12 & 0 & 100.0 & 0.0 & 8.33 & 0.0 \\
+
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+    \item[a] n/a indicates no 留 voters to receive the payout.
+\end{tablenotes}
+\caption{Payout structure for different numbers of debaters and voting scenarios}
+\end{threeparttable}
+\end{table}
+

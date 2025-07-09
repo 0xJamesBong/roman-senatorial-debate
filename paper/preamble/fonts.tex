@@ -1,14 +1,9 @@
 
 % Set CJK main font (for Chinese/Japanese/Korean characters)
 
-% \setmainfont{Times New Roman}
+
 \setCJKmainfont{BabelStone Han}
-% doesn't work
-% \setCJKmainfont{JyutcitziWithSourceHanSerifTCRegular}[
-% Renderer=Basic,
-% UprightFont = * ,
-% FallbackFonts={BabelStone Han}
-% ]
+
 
 
 
@@ -18,9 +13,11 @@
 
 
 
-\newfontfamily{\jczPMingLiU}{JyutcitziWithPMingLiURegular}[Path = ./fonts/, Extension = .ttf]
-% This has the best rendition for latin characters 
+% \newfontfamily{\jczPMingLiU}{JyutcitziWithPMingLiURegular}[Path = ./fonts/, Extension = .ttf]
+% % This has the best rendition for latin characters 
 \newfontfamily{\jcz}{JyutcitziWithSourceHanSerifTCRegular}[Path = ./fonts/, Extension = .ttf]
+\newcommand{\jcztext}[1]{{\jcz #1}}
+
 \newfontfamily{\batang}{batang}[Path = ./fonts/, Extension = .ttf]
 \newCJKfontfamily\koreanfont{Batang}[Path = ./fonts/, Extension = .ttf]
 \newfontfamily{\taigi}{GentiumBookPlus-Regular}[Path = ./fonts/, Extension = .ttf]
