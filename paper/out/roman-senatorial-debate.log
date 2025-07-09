@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 15:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -713,8 +713,7 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen318
 \titlewidthlast=\dimen319
 \titlewidthfirst=\dimen320
-))
-No file roman-senatorial-debate.aux.
+)) (out/roman-senatorial-debate.aux)
 \openout1 = `roman-senatorial-debate.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -790,7 +789,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 60.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/ninecolors/ninecolors.sty
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
@@ -866,21 +865,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 417--492
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)
-
-/Users/hongjan/Documents/roman-senatorial-debate/paper/roman-senatorial-debate.tex:78: LaTeX Error: \begin{enumerate} on input line 5 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.78 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
+) (./chapters/2-elimination-rounds.tex
 
 [3]
 
@@ -890,27 +875,25 @@ or  <return>  to continue without it.
 
 [6]
 
-[7]
+[7])
 
 [8]
 
-[9] (out/roman-senatorial-debate.aux)
+[9]
+
+[10] (out/roman-senatorial-debate.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 5 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 12119 strings out of 473832
- 295878 string characters out of 5729481
- 877227 words of memory out of 5000000
- 34940 multiletter control sequences out of 15000+600000
+ 12128 strings out of 473832
+ 296192 string characters out of 5729481
+ 873220 words of memory out of 5000000
+ 34944 multiletter control sequences out of 15000+600000
  568680 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,17n,114p,1114b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,17n,114p,1114b,403s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/roman-senatorial-debate.pdf (9 pages).
+Output written on out/roman-senatorial-debate.pdf (10 pages).
