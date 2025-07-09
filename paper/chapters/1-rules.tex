@@ -36,10 +36,10 @@ Here we present the rules of a round of Roman Senatorial Debate.
     \item \textbf{Voting and resolution.} When all speeches have been, the chamber shall undergo a round of voting. This ultimate round of voting involves no monetary commitment. The vote is recorded by name. Each senator must write down on a piece of paper, his name,the side he votes for, and then all the votes are counted and revealed public. Votes with no names are invalid. Senators whose vote are not recorded are considered to have abstained. Senators may vote in favour, in opposition, or abstain or remain undecided. The threshold for winning is 1 + half of the total number of debaters. This means in a chamber of 8 senators, for Proposition or Opposition to win, it must secure 5 votes. If the vote is split evenly 4-4, then the motion is defeated, tho neither Proposition or Opposition has won - it is a tie. If the vote is split 4-3-1 in Y-N-U, then the motion is also defeated, and neither proposition nor opposition has won. It is still a tie.
     
 
-    \item \textbf{Points and Jackpot split.} The general philosophy is that points is what counts towards breaks - senators with the highest points break into the elimination rounds. Jackpoint is monetary reward, and fuel. They do not count in any towards breaks. 
+    \item \textbf{Points and Jackpot} The general philosophy is that points is what counts towards breaks - senators with the highest points break into the elimination rounds. Jackpot is monetary reward, and fuel. They do not count in any way towards breaks. 
     \begin{itemize}
         \item The points are distributed thus, to every senator:
-         \begin{table}[h]
+        \begin{table}[h]
             \centering
             \begin{tabular}{l|ccc}
             \toprule
@@ -50,17 +50,14 @@ Here we present the rules of a round of Roman Senatorial Debate.
             tie 和 & 0 & 0 & 0 \\
             \bottomrule
             \end{tabular}
-            \end{table}
+        \end{table}
+        \item Senators who were undecided at the start of the debate and voted in favour or against the motion are considered to have switched sides, and are rewarded 1 point.
         \item You can see that those who lost the debate but stuck to their guns are rewarded more highly in terms of points than those who switched sides. 
-        \item You can see that ties are very punishing to all senators involved. it basically means they have all wasted time and everyone has lost. 
-            
+        \item You can see that ties are very punishing to all senators involved. It basically means they have all wasted time and everyone has lost. 
     \end{itemize}
-\end{enumerate}
 
-
-\begin{enumerate}
-    \item The pot money is split thus:
-    \begin{enumerate}
+    \item The jackpot money is split thus:
+    \begin{itemize}
         \item $s$ is the total sum in the pot, which always abides by the following: $s = w_{\text{留}} + w_{\text{轉}}$
         \item $v$ is the total number of votes on the winning side, which always abides by the following: $v = v_{\text{留}} + v_{\text{轉}}$
         \item $w_{\text{留}}$ and $w_{\text{轉}}$ are defined as such:
@@ -69,21 +66,14 @@ Here we present the rules of a round of Roman Senatorial Debate.
             \item $w_{\text{轉}} = s \cdot \frac{v_{\text{轉}}}{v+1}$
         \end{enumerate}
         \item To say this without justification, this creates a quasi-prisoner's dilemma situation in the following box, where those who switch sides and win, win money but lose out relatively on points.
-        \item the split of the $w_{\text{留}}$ and $w_{\text{轉}}$ leave a weird case where everyone switched sides and that side won. In such a case, there'd be nobody to claim the virtual 留贏 share. That share can go to many places: (1) the poorest member, (2) the hosting tournament, (3) divided equally amongst all players\ldots (4) taken by the winning side as well\ldots
-    \end{enumerate}
-\end{enumerate}
+        \item The split of the $w_{\text{留}}$ and $w_{\text{轉}}$ leaves a weird case where everyone switched sides and that side won. In such a case, there'd be nobody to claim the virtual 留贏 share. That share can go to many places: (1) the poorest member, (2) the hosting tournament, (3) divided equally amongst all players\ldots (4) taken by the winning side as well\ldots
+    \end{itemize}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{l|cc}
-\toprule
- & 留 & 轉軚 \\
-\midrule
-贏 & 3 & 1 \\
-輸 & 2 & 0 \\
-\bottomrule
-\end{tabular}
-\end{table}
+
+
+
+
+
 
 The point of the dynamic is: some people care about the money, some people care about passing the motion.
 
