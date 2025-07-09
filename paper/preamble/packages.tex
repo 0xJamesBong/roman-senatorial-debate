@@ -1,0 +1,46 @@
+% *-----------------------------------------------------------------------*
+% | Math & Equations     |
+% *-----------------------------------------------------------------------*
+\usepackage{amsmath} % For advanced math formatting
+\usepackage{amssymb} % For mathematical symbols
+% \usepackage{tikz} % For drawing logic decision trees
+
+
+% *-----------------------------------------------------------------------*
+% | Table Management                                                      |
+% *-----------------------------------------------------------------------*
+
+
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{tabularray}
+
+\usepackage{float}      % Add the float package
+\usepackage{longtable}
+
+
+\usepackage[table,xcdraw]{xcolor}
+ \definecolor{stone}{rgb}{0.7,0.9,0.7} % light green
+\definecolor{lightblue}{rgb}{0.8,0.9,1} % light blue
+\definecolor{liquid}{rgb}{1,0.8,0.9} % light pink
+\definecolor{gold}{rgb}{1,0.9,0.7} % light yellow
+\definecolor{gas}{rgb}{0.7,0.8,1} % light blue
+
+\newcommand{\elcol}[3]{\if\relax\detokenize{#1}\relax\begin{tabular}{@{}c@{}}#2\\[0.3em]#3\end{tabular}\else\cellcolor{#1}\begin{tabular}{@{}c@{}}#2\\[0.3em]#3\end{tabular}\fi}
+
+
+
+
+% super long table
+
+\usepackage{pdflscape} % For rotated pages
+
+\setlength{\arrayrulewidth}{0.5mm} % Optional: to thicken table lines
+\renewcommand{\arraystretch}{1.5} % Optional: to increase row height
+
+
+\usepackage{makecell} 
+
+
+\usepackage{threeparttable}
