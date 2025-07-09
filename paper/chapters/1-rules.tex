@@ -55,7 +55,7 @@ Here we present the rules of a round of Roman Senatorial Debate.
         \item You can see that ties are very punishing to all senators involved. It basically means they have all wasted time and everyone has lost. 
     \end{itemize}
 
-    \item The jackpot money is split thus:
+    \item \textbf{Jackpot money distribution.} The jackpot money is split thus:
     \begin{itemize}
         \item $s$ is the total sum in the pot, which always abides by the following: $s = w_{\text{留}} + w_{\text{轉}}$
         \item $v$ is the total number of votes on the winning side, which always abides by the following: $v = v_{\text{留}} + v_{\text{轉}}$
@@ -70,6 +70,22 @@ Here we present the rules of a round of Roman Senatorial Debate.
 
     \end{itemize}
 
+    \item \textbf{The rewards table} Combining the points and jackpot money distribution, the rewards matrix for each senator is:
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{l|ccc}
+        \toprule
+         & stay 留 & switch 轉軚 & abstain 棄權 \\
+        \midrule
+        win 贏 & (3,$\frac{sv_{\text{留}}+1}{v_{\text{留}}(v+1)}$)  & (1,$\frac{s v_{\text{轉}}}{v_{\text{轉}}(v+1)}$) & (0,0) \\
+        lose 輸 & (2,0) & (0,0) & (0,0) \\
+        tie 和 & (0,0) & (0,0) & (0,0) \\
+        \bottomrule
+        \end{tabular}
+    \end{table}
+
+    As we can see, the switching side has monetary pay out $\frac{s v_{\text{轉}}}{v_{\text{轉}}(v+1)} = \frac{s}{v+1}$.
+
     % \item \textbf{Nonstandard number of participants.} 
     % Suppose for some reason, or out of some other consideration, you have 8 senators, but you also want to introduce a number of $n$ participants into a round, without necessarily giving them full senatorial rights. Perhaps you want to increase the complexity or the anchorage of opinions in a round. Or perhaps you want to involve the entire audience in resolving the debate. 
 
@@ -78,6 +94,42 @@ Here we present the rules of a round of Roman Senatorial Debate.
     \item \textbf{Chairs \& Speakers} Suppose for the sake of decorum, and perhaps for the sake of maintaining accounting validity, you might want to introduce a chair, or a speaker. The chair's role, unlike in British Parliamentary debate, does not involve judging. He is only involved in making sure the outcome properly computed and resolved. 
 
 \end{enumerate}
+
+\begin{figure}[H] % or just [htbp] if not using the float package
+    \centering
+    \begin{tikzpicture}[node distance=1.5cm]
+    
+        \node (start) [startstop] {START};
+        
+        \node (entry) [process, below of=start] {1. Entry \& Coin Declaration};
+        \node (chair) [process, below of=entry] {2. Chair Records Sides \& Forms Jackpot};
+        \node (order) [process, below of=chair] {3. Speaker Order Determination};
+        \node (speak) [process, below of=order] {4. Speaking Phase (7 mins)};
+        \node (vote) [process, below of=speak] {5. Final Voting Phase};
+        \node (result) [decision, below of=vote, yshift=-0.2cm] {6. Vote Tally};
+        \node (points) [process, below of=result, yshift=-1.0cm] {7. Points Assignment};
+        \node (jackpot) [process, below of=points] {8. Jackpot Distribution};
+        
+        \node (end) [startstop, below of=jackpot] {END OF ROUND};
+        
+        % Arrows
+        \draw [arrow] (start) -- (entry);
+        \draw [arrow] (entry) -- (chair);
+        \draw [arrow] (chair) -- (order);
+        \draw [arrow] (order) -- (speak);
+        \draw [arrow] (speak) -- (vote);
+        \draw [arrow] (vote) -- (result);
+        \draw [arrow] (result) -- (points);
+        \draw [arrow] (points) -- (jackpot);
+        \draw [arrow] (jackpot) -- (end);
+    
+    \end{tikzpicture}
+    \caption{Flowchart of a round of the Roman Senatorial Debate}
+    \label{fig:flowchart}
+    \end{figure}
+            
+
+    
 
 
 
