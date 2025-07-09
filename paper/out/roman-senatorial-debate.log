@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 14:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 15:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -804,7 +804,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 ]
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 67--98
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[2]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 98--129
  [] 
  []
 
@@ -812,7 +818,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 67--98
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 106--143
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 137--174
  [] 
  []
 
@@ -820,7 +826,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 106--143
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 150--191
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 181--222
  [] 
  []
 
@@ -828,7 +834,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 150--191
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 197--248
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 228--279
  [] 
  []
 
@@ -836,7 +842,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 197--248
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 254--310
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 285--341
  [] 
  []
 
@@ -844,7 +850,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 254--310
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 318--387
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 349--418
  [] 
  []
 
@@ -852,7 +858,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 318--387
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0239pt too wide) in paragraph at lines 396--471
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 427--502
  [] 
  []
 
@@ -860,8 +866,6 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 396--471
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
-
-[2]
 
 [3]
 
@@ -873,19 +877,21 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7]
 
-[8] (out/roman-senatorial-debate.aux)
+[8]
+
+[9] (out/roman-senatorial-debate.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12101 strings out of 473832
- 294542 string characters out of 5729481
+ 12122 strings out of 473832
+ 295980 string characters out of 5729481
  877218 words of memory out of 5000000
- 34920 multiletter control sequences out of 15000+600000
+ 34941 multiletter control sequences out of 15000+600000
  568680 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,17n,114p,528b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,17n,114p,1114b,403s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/roman-senatorial-debate.pdf (8 pages).
+Output written on out/roman-senatorial-debate.pdf (9 pages).
