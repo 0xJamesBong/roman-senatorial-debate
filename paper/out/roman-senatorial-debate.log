@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 19:08
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  9 JUL 2025 19:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1002,15 +1002,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [3]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 [4]
 
 [5]
 
 [6]
+
+[7]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 146--177
  [] 
  []
@@ -1022,7 +1020,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 185--222
 
 
 
-[7]
+[8]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 229--270
  [] 
  []
@@ -1034,38 +1032,40 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 276--327
 
 
 
-[8]
+[9]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 333--389
  [] 
  []
 
 
 
-[9]
+[10]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 397--466
  [] 
  []
 
 
 
-[10]
+[11]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 475--550
  [] 
  []
 
 
 
-[11]) (./chapters/3-elimination-rounds.tex
+[12]) (./chapters/3-elimination-rounds.tex
 
-[12]
+[13]
 
-[13]) (./chapters/4-intellectual-capture.tex) (./chapters/5-emergent-phenomenon.tex
+[14]) (./chapters/4-emergent-phenomenon.tex
 
-[14]
+[15]
 
-[15])
+[16]) (./chapters/7-intellectual-capture.tex
 
-[16] (out/roman-senatorial-debate.aux)
+[17])
+
+[18] (out/roman-senatorial-debate.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
@@ -1074,10 +1074,10 @@ L3 programming layer <2022/07/14>
 Here is how much of TeX's memory you used:
  23194 strings out of 473832
  544545 string characters out of 5729481
- 1017538 words of memory out of 5000000
+ 1016538 words of memory out of 5000000
  45778 multiletter control sequences out of 15000+600000
  568680 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,17n,114p,1315b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/roman-senatorial-debate.pdf (16 pages).
+Output written on out/roman-senatorial-debate.pdf (18 pages).
