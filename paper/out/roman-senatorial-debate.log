@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  11 JUL 2025 16:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  11 JUL 2025 16:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -962,4 +962,142 @@ LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 60.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `bold' on input line 60.
-LaTeX Font Info:    Ove
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 60.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 60.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 60.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 60.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 60.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 60.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 60.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 60.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 60.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 60.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/ninecolors/ninecolors.sty
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./chapters/0-epigraphs.tex
+
+[1
+
+]
+
+[2]) (./chapters/1-intro.tex
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+
+[11]
+
+[12]) (./chapters/2-rules.tex
+
+[13]
+
+[14]
+
+[15]
+
+[16]
+
+[17]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 146--177
+ [] 
+ []
+
+
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 185--222
+ [] 
+ []
+
+
+
+[18]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 229--270
+ [] 
+ []
+
+
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 276--327
+ [] 
+ []
+
+
+
+[19]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 333--389
+ [] 
+ []
+
+
+
+[20]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 397--466
+ [] 
+ []
+
+
+
+[21]
+Overfull \hbox (4.0239pt too wide) in paragraph at lines 475--550
+ [] 
+ []
+
+
+
+[22]) (./chapters/3-elimination-rounds.tex
+
+[23]
+
+[24]) (./chapters/4-emergent-phenomenon.tex
+
+[25]
+
+[26]) (./chapters/7-intellectual-capture.tex
+
+[27])
+
+[28] (out/roman-senatorial-debate.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2022/07/14>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 23356 strings out of 473832
+ 555299 string characters out of 5729481
+ 1017603 words of memory out of 5000000
+ 45939 multiletter control sequences out of 15000+600000
+ 568688 words of font info for 110 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 93i,17n,114p,2707b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on out/roman-senatorial-debate.pdf (28 pages).
