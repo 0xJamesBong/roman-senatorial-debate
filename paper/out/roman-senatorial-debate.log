@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  11 JUL 2025 16:41
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.29)  11 JUL 2025 17:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1015,12 +1015,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [9]
 
 [10]
+Underfull \hbox (badness 1117) in paragraph at lines 122--123
+[]\TU/lmr/bx/n/10 Mistaking bullshitting as intellectualism. \TU/lmr/m/n/10 The increased
+ []
+
+
 
 [11]
 
-[12]) (./chapters/2-rules.tex
+[12]
 
-[13]
+[13]) (./chapters/2-rules.tex
 
 [14]
 
@@ -1029,6 +1034,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [16]
 
 [17]
+
+[18]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 146--177
  [] 
  []
@@ -1040,7 +1047,7 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 185--222
 
 
 
-[18]
+[19]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 229--270
  [] 
  []
@@ -1052,52 +1059,52 @@ Overfull \hbox (4.0239pt too wide) in paragraph at lines 276--327
 
 
 
-[19]
+[20]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 333--389
  [] 
  []
 
 
 
-[20]
+[21]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 397--466
  [] 
  []
 
 
 
-[21]
+[22]
 Overfull \hbox (4.0239pt too wide) in paragraph at lines 475--550
  [] 
  []
 
 
 
-[22]) (./chapters/3-elimination-rounds.tex
+[23]) (./chapters/3-elimination-rounds.tex
 
-[23]
+[24]
 
-[24]) (./chapters/4-emergent-phenomenon.tex
+[25]) (./chapters/4-emergent-phenomenon.tex
 
-[25]
+[26]
 
-[26]) (./chapters/7-intellectual-capture.tex
+[27]) (./chapters/7-intellectual-capture.tex
 
-[27]) (./chapters/8-recommended-motions.tex)
+[28]) (./chapters/8-recommended-motions.tex)
 
-[28] (out/roman-senatorial-debate.aux)
+[29] (out/roman-senatorial-debate.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 23365 strings out of 473832
- 555603 string characters out of 5729481
- 1017603 words of memory out of 5000000
- 45943 multiletter control sequences out of 15000+600000
- 568696 words of font info for 111 fonts, out of 8000000 for 9000
+ 23382 strings out of 473832
+ 556540 string characters out of 5729481
+ 1016791 words of memory out of 5000000
+ 45958 multiletter control sequences out of 15000+600000
+ 568704 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,17n,114p,2707b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/roman-senatorial-debate.pdf (28 pages).
+Output written on out/roman-senatorial-debate.pdf (29 pages).
